@@ -1,0 +1,21 @@
+{
+  "name": "field_management",
+  "version": "1.0.0",
+  "type": "module",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+
+    "sourceMap": false,
+    "declaration": false,
+    "removeComments": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src", "src/components"]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "_id": 1,
+    "name": "Samsung Galaxy A25 5G",
+    "IMEI": "357567916365155",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 2,
+    "name": "Samsung Galaxy A25 5G",
+    "IMEI": "357567916772418",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 3,
+    "name": "Samsung Galaxy A25 5G",
+    "IMEI": "351816150441636",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 4,
+    "name": "Samsung Galaxy A25 5G",
+    "IMEI": "351816151034893",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 5,
+    "name": "Samsung Galaxy A16 5G",
+    "IMEI": "354833764155020",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 6,
+    "name": "Samsung Galaxy A16 5G",
+    "IMEI": "350907321060859",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 7,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "356722915519218",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 8,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355738550551366",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 9,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "356722911064540",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 10,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355738554366217",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 11,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "356722911064359",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 12,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355738550550699",
+    "new": true,
+    "maas360": true
+  },
+  {
+    "_id": 13,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355894630251368",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 14,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355738551155605",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 15,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "356722917446741",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 16,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355894630251020",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 17,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "356722911065042",
+    "new": true,
+    "maas360": true
+  },
+  {
+    "_id": 18,
+    "name": "Samsung Galaxy A15 5G",
+    "IMEI": "355738551174150",
+    "new": true,
+    "maas360": false
+  },
+  {
+    "_id": 19,
+    "name": "Samsung Galaxy A14",
+    "IMEI": "356969672477276",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 20,
+    "name": "Samsung Galaxy A14",
+    "IMEI": "356969672462203",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 21,
+    "name": "Samsung Galaxy A14",
+    "IMEI": "350528720407804",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 22,
+    "name": "Samsung Galaxy A13",
+    "IMEI": "357651716343859",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 23,
+    "name": "Samsung Galaxy A13",
+    "IMEI": "352967353480779",
+    "new": false,
+    "maas360": false
+  },
+  {
+    "_id": 24,
+    "name": "Samsung Galaxy A56 5G",
+    "IMEI": "351814332274652",
+    "new": true,
+    "maas360": true
+  }
+]

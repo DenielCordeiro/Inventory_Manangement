@@ -1,0 +1,164 @@
+[
+    {
+        "_id": 1,
+        "name": "Lenovo ThinkPad Gen 4",
+        "serialNumber": "PE0CNM14",
+        "new": false
+    },
+    {
+        "_id": 2,
+        "name": "Lenovo ThinkPad Gen 4",
+        "serialNumber": "PE0CWNSR",
+        "new": false
+    },
+    {
+        "_id": 3,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE07XHXS",
+        "new": false
+    },
+    {
+        "_id": 4,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE09NWJ8",
+        "new": false
+    },
+    {
+        "_id": 5,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE07W5A8",
+        "new": false
+    },
+    {
+        "_id": 6,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE09NPB2",
+        "new": false
+    },
+    {
+        "_id": 7,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE08Q00M",
+        "new": false
+    },
+    {
+        "_id": 8,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE07W58C",
+        "new": false
+    },
+    {
+        "_id": 9,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE09P5A3",
+        "new": false
+    },
+    {
+        "_id": 10,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE08YX6P",
+        "new": false
+    },
+    {
+        "_id": 11,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE07XGL5",
+        "new": false
+    },
+    {
+        "_id": 12,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE09P529",
+        "new": false
+    },
+    {
+        "_id": 13,
+        "name": "Lenovo ThinkPad Gen 2",
+        "serialNumber": "PE09P5EM",
+        "new": false
+    },
+    {
+        "_id": 14,
+        "name": "Lenovo ThinkPad Gen 1",
+        "serialNumber": "PE06VHHX",
+        "new": false
+    },
+    {
+        "_id": 15,
+        "name": "Lenovo ThinkPad Gen 1",
+        "serialNumber": "PE06VH3L",
+        "new": false
+    },
+    {
+        "_id": 16,
+        "name": "Lenovo ThinkPad Gen 1",
+        "serialNumber": "PE07J3RQ",
+        "new": false
+    },
+    {
+        "_id": 17,
+        "name": "HP Probook 640 G8",
+        "serialNumber": "BRJ2371PBZ",
+        "new": false
+    },
+    {
+        "_id": 18,
+        "name": "Dell Latitude 3420",
+        "serialNumber": "6GRRRN3",
+        "new": false
+    },
+    {
+        "_id": 19,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "90BW393",
+        "new": false
+    },
+    {
+        "_id": 20,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "H0BW393",
+        "new": false
+    },
+    {
+        "_id": 21,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "BKBW393",
+        "new": false
+    },
+    {
+        "_id": 22,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "GQZW393",
+        "new": false
+    },
+    {
+        "_id": 23,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "7XZW393",
+        "new": false
+    },
+    {
+        "_id": 24,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "98J1493",
+        "new": false
+    },
+    {
+        "_id": 25,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "4CJ1493",
+        "new": false
+    },
+    {
+        "_id": 26,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "G0BW393",
+        "new": false
+    },
+    {
+        "_id": 27,
+        "name": "Dell Latitude 3410",
+        "serialNumber": "2XZW393",
+        "new": false
+    }
+]
