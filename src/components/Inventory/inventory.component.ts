@@ -14,10 +14,10 @@ export class InventoryComponent extends HTMLElement {
   };
 
   async connectedFiles(): Promise<void> {
-    const html = await fetch("./inventory.component.html")
+    const html = await fetch("/components/inventory/inventory.component.html")
       .then(res => res.text());
 
-    const css = await fetch("./inventory.component.css")
+    const css = await fetch("/components/inventory/inventory.component.css")
       .then(res => res.text());
 
     this.shadow.innerHTML = `<style>${css}</style>${html}`;
@@ -27,11 +27,6 @@ export class InventoryComponent extends HTMLElement {
     try {
       const res = await fetch("/inventory");
       this.inventory = await res.json();
-
-      console.log('Estoque completo:', this.inventory);
-      console.log('Chips:', this.inventory.chips);
-      console.log('Celulares:', this.inventory.cellPhones);
-      console.log('Notebooks:', this.inventory.notebooks);
     } catch (err) {
       console.error('Erro ao carregar JSON:', err);
     }

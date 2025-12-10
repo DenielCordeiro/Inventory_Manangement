@@ -6,10 +6,10 @@
     "dev": "concurrently \"pnpm dev:server\" \"pnpm dev:ts\"",
     "dev:server": "ts-node-dev --respawn --transpile-only src/server.ts",
     "dev:ts": "tsc --watch",
-    "sass": "sass src --no-source-map --watch",
+    "sass": "sass public --no-source-map --watch",
     "build": "pnpm run -s build:ts build:sass",
     "build:ts": "tsc",
-    "build:sass": "sass src --no-source-map --style=compressed"
+    "build:sass": "sass public --no-source-map --style=compressed"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

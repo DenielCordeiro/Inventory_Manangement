@@ -60,12 +60,6 @@
         "new": false
     },
     {
-        "_id": 11,
-        "name": "Lenovo ThinkPad Gen 2",
-        "serialNumber": "PE07XGL5",
-        "new": false
-    },
-    {
         "_id": 12,
         "name": "Lenovo ThinkPad Gen 2",
         "serialNumber": "PE09P529",
@@ -111,12 +105,6 @@
         "_id": 19,
         "name": "Dell Latitude 3410",
         "serialNumber": "90BW393",
-        "new": false
-    },
-    {
-        "_id": 20,
-        "name": "Dell Latitude 3410",
-        "serialNumber": "H0BW393",
         "new": false
     },
     {
