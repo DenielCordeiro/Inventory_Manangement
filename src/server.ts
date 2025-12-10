@@ -15,13 +15,31 @@ app.use(express.static(path.join(__dirname, "../public"))); // Serve arquivos es
 app.use("/dist", express.static(path.join(__dirname, "../dist"))); // Serve arquivos estáticos da pasta dist
 
 
-app.get("/chips", async (req, res) => {
+app.get("/inventory", async (req, res) => {
   try {
-    const filePath = path.join(__dirname, "../src/assets/cellphones.json");
-    const data = await fs.readFile(filePath, "utf-8");
-    const cellphones = JSON.parse(data);
+    const filePathChips = path.join(__dirname, "../src/assets/chips.json");
+    const filePathCellPhones = path.join(__dirname, "../src/assets/cellphones.json");
+    const filePathNotebooks = path.join(__dirname, "../src/assets/notebooks.json");
 
-    res.json(cellphones);
+    const dataChips = await fs.readFile(filePathChips, "utf-8");
+    const dataCellPhones = await fs.readFile(filePathCellPhones, "utf-8");
+    const dataNotebooks = await fs.readFile(filePathNotebooks, "utf-8");
+
+    const chips = JSON.parse(dataChips);
+    const cellPhones = JSON.parse(dataCellPhones);
+    const notebooks = JSON.parse(dataNotebooks);
+
+    const inventory: {
+      chips: any[];
+      cellPhones?: any[];
+      notebooks?: any[];
+    } = {
+      chips: chips,
+      cellPhones: cellPhones,
+      notebooks: notebooks
+    };
+
+    res.json(inventory);
   } catch (err) {
     res.status(500).json({ error: 'Erro ao carregar JSON' });
   }
