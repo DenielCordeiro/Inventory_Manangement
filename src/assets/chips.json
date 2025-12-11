@@ -1,20 +1,23 @@
 [
     {
-        "_id": 1,
+        "model": "Claro",
         "HLR": "01",
         "ICCID": "89550534010032453781",
+        "line": "",
         "new": true
     },
     {
-        "_id": 2,
+        "model": "Claro",
         "HLR": "01",
         "ICCID": "89550534010032453989",
+        "line": "",
         "new": true
     },
     {
-        "_id": 3,
+        "model": "Claro",
         "HLR": "01",
         "ICCID": "89550534010032454300",
+        "line": "",
         "new": true
     }
 ]

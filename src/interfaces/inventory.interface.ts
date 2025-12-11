@@ -6,4 +6,7 @@ export interface Inventory {
     chips?: Chip[];  
     cellPhones?: Cellphone[];
     notebooks?: Notebook[];
+    chipsQuantity?: number;
+    cellPhonesQuantity?: number;
+    notebooksQuantity?: number;
 }

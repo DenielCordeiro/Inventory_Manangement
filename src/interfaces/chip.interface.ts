@@ -1,7 +1,7 @@
 export interface Chip {
-	model: string;      
-	ICCID: number;          
-	quantity: number;   
-	hlr:   string;         
-	line: string; 
+	model?: string;      
+	ICCID?: number;        
+	hlr?:   string;         
+	line?: string; 
+	new?: boolean
 }
