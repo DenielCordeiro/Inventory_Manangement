@@ -56,20 +56,6 @@
     "maas360": false
   },
   {
-    "_id": 9,
-    "name": "Samsung Galaxy A15 5G",
-    "IMEI": "356722911064540",
-    "new": true,
-    "maas360": false
-  },
-  {
-    "_id": 10,
-    "name": "Samsung Galaxy A15 5G",
-    "IMEI": "355738554366217",
-    "new": true,
-    "maas360": false
-  },
-  {
     "_id": 11,
     "name": "Samsung Galaxy A15 5G",
     "IMEI": "356722911064359",
@@ -91,23 +77,9 @@
     "maas360": false
   },
   {
-    "_id": 14,
-    "name": "Samsung Galaxy A15 5G",
-    "IMEI": "355738551155605",
-    "new": true,
-    "maas360": false
-  },
-  {
     "_id": 15,
     "name": "Samsung Galaxy A15 5G",
     "IMEI": "356722917446741",
-    "new": true,
-    "maas360": false
-  },
-  {
-    "_id": 16,
-    "name": "Samsung Galaxy A15 5G",
-    "IMEI": "355894630251020",
     "new": true,
     "maas360": false
   },
