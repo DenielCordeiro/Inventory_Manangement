@@ -2,29 +2,40 @@ import { Inventory } from "../../interfaces/inventory.interface";
 import { Chip } from "../../interfaces/chip.interface";
 
 export class InventoryComponent extends HTMLElement {
-  private shadow = this.attachShadow({ mode: "open" });
+  public inventoryHTML: HTMLElement = this;
   public inventory!: Inventory;
-  public chip!: Chip;
+  public chip!: Chip
+  public menuToggleButton: boolean = false; 
 
   constructor() {
     super();
   };
 
-
   async connectedCallback() { // ciclo de vida do componente
-    await this.connectedFiles();  // Inserir HTML e CSS no shadow
-    this.startForms();              // Agora os elementos existem
-    this.loadInventory();         // Pode buscar dados de API           
+    await this.connectedFiles(); // Inserir HTML e CSS no shadow
+    this.startForms(); // Agora os elementos existem
+    this.loadInventory();  // Pode buscar dados de API   
+    this.toggleMenu(); // Menu lateral      
+  }
+
+  public toggleMenu(): void {
   }
 
   async connectedFiles(): Promise<void> {
     const html = await fetch("/components/inventory/inventory.component.html")
       .then(res => res.text());
 
-    const css = await fetch("/components/inventory/inventory.component.css")
+    const inventoryCss = await fetch("/components/inventory/inventory.component.css")
       .then(res => res.text());
 
-    this.shadow.innerHTML = `<style>${css}</style>${html}`;
+    const menuCss = await fetch("/components/side_menu/side_menu.component.css")
+      .then(res => res.text());
+
+    this.inventoryHTML.innerHTML = `
+      <style>${inventoryCss}</style>
+      <style>${menuCss}</style>
+      ${html}
+    `;
   }
 
   async loadInventory(): Promise<Inventory> {
@@ -39,25 +50,25 @@ export class InventoryComponent extends HTMLElement {
   }
 
   async startForms(): Promise<void> {
-    const formChip = this.shadow.querySelector("#create-chip-form") as HTMLFormElement;
-    
+  const formChip = this.inventoryHTML.querySelector("#create-chip-form") as HTMLFormElement;
 
-    if (!formChip) return;
+  if (!formChip) return;
 
-    formChip.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Evita reload da página
+  formChip.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-      const chip: Chip = {
-        model: (this.shadow.querySelector("#chip-model") as HTMLInputElement).value,
-        ICCID: Number((this.shadow.querySelector("#chip-iccid") as HTMLInputElement).value),
-        hlr: (this.shadow.querySelector("#chip-hlr") as HTMLInputElement).value,
-        line: (this.shadow.querySelector("#chip-line") as HTMLInputElement).value,
-      };
+    const chip: Chip = {
+      model: (this.inventoryHTML.querySelector("#chip-model") as HTMLInputElement).value,
+      ICCID: Number((this.inventoryHTML.querySelector("#chip-iccid") as HTMLInputElement).value),
+      hlr: (this.inventoryHTML.querySelector("#chip-hlr") as HTMLInputElement).value,
+      line: (this.inventoryHTML.querySelector("#chip-line") as HTMLInputElement).value,
+    };
 
-      await this.createChip(chip);
-      formChip.reset();
-    });
-  }
+    await this.createChip(chip);
+    formChip.reset();
+  });
+}
+
 
   async createChip(chip: Chip): Promise<Chip> {
     console.log("Creating chip:", chip);

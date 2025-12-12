@@ -1,46 +1,71 @@
-<form id="create-chip-form">
-    <div>
-        <label for="chip-model">Modelo:</label>
-        <select name="chip-model" id="chip-model" required>
-            <option value="claro" selected>CLARO</option>
-            <option value="vivo" >VIVO</option>
-            <option value="tim">TIM</option>
-        </select>
-    </div>
+<template id="form-chip">
+    <form id="create-chip-form">
+        <div>
+            <label for="chip-model">Modelo:</label>
+            <select name="chip-model" id="chip-model" required>
+                <option value="claro" selected>CLARO</option>
+                <option value="vivo" >VIVO</option>
+                <option value="tim">TIM</option>
+            </select>
+        </div>
 
-    <div>
-        <label for="chip-hlr">HLR:</label>
-        <select name="chip-hlr" id="chip-hlr">
-            <option value="hlr46" selected>HLR 46</option>
-            <option value="hlr64" >HLR 64</option>
-            <option value="hlr01">HLR 01</option>
-            <option value="hlr16">HLR 16</option>
-        </select>
-    </div>
+        <div>
+            <label for="chip-hlr">HLR:</label>
+            <select name="chip-hlr" id="chip-hlr">
+                <option value="hlr46" selected>HLR 46</option>
+                <option value="hlr64" >HLR 64</option>
+                <option value="hlr01">HLR 01</option>
+                <option value="hlr16">HLR 16</option>
+            </select>
+        </div>
 
-    <div>
-        <label for="chip-iccid">ICCID:</label>
-        <input type="number" id="chip-iccid" name="chip-iccid" required />
-    </div>
+        <div>
+            <label for="chip-iccid">ICCID:</label>
+            <input type="number" id="chip-iccid" name="chip-iccid" required />
+        </div>
 
-    <div>
-        <label for="chip-line">Linha:</label>
-        <input type="text" id="chip-line" name="chip-line" required />
-    </div>
+        <div>
+            <label for="chip-line">Linha:</label>
+            <input type="text" id="chip-line" name="chip-line" required />
+        </div>
 
-    <button type="submit">Criar CHIP</button>
-</form>
+        <button type="submit">Criar CHIP</button>
+    </form>
+</template>
 
-<form id="create-monitor-form">
-    <div class="monitor-model">
-        <label for="monitor-model">Modelo:</label>
-        <select name="monitor-model" id="monitor-model" required>
-            <option value="dell" selected>Dell 21.1 P</option>
-        </select>
-    </div>
 
-    <div class="monitor-serial">
-        <label for="monitor-serial">Número de Série:</label>
-        <input type="text" id="monitor-serial" name="monitor-serial" required />
-    </div>
-</form>
+<template id="form-monitor">
+    <form id="create-monitor-form">
+        <div class="monitor-model">
+            <label for="monitor-model">Modelo:</label>
+            <select name="monitor-model" id="monitor-model" required>
+                <option value="dell" selected>Dell 21.1 P</option>
+            </select>
+        </div>
+
+        <div class="monitor-serial">
+            <label for="monitor-serial" class="form-label">Número de Série:</label>
+            <input type="text" id="monitor-serial" name="monitor-serial" class="form-control" required />
+        </div>
+    </form>
+</template>
+
+<header>
+    <h1>Header aqui</h1>
+</header>
+
+<div class="side-menu">
+    <ul class="sidebar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+<main>
+    <h1>Conteúdo Principal</h1>
+</main>
+
+<footer>
+    <h1>Rodapé</h1>
+</footer>
