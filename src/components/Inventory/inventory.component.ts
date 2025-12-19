@@ -14,12 +14,34 @@ export class InventoryComponent extends HTMLElement {
   async connectedCallback() { // ciclo de vida do componente
     await this.connectedFiles(); // Inserir HTML e CSS no shadow
     this.startForms(); // Agora os elementos existem
-    this.loadInventory();  // Pode buscar dados de API   
-    this.toggleMenu(); // Menu lateral      
+    this.loadInventory();  // Pode buscar dados de API 
+    this.toggleMenu(); // Ouvir clique no botão do menu    
   }
 
   public toggleMenu(): void {
+    const toggle = this.inventoryHTML.querySelector("#menu-toggle") as HTMLElement;
+    const sideMenu = this.inventoryHTML.querySelector(".side-menu") as HTMLElement;
+
+    if (!toggle || !sideMenu) return;
+
+    // Abrir / fechar menu
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation(); // impede conflito com click fora
+      sideMenu.classList.toggle("open");
+    });
+
+    // Fechar ao clicar fora
+    document.addEventListener("click", (event) => {
+      if (
+        sideMenu.classList.contains("open") &&
+        !sideMenu.contains(event.target as Node) &&
+        !toggle.contains(event.target as Node)
+      ) {
+        sideMenu.classList.remove("open");
+      }
+    });
   }
+
 
   async connectedFiles(): Promise<void> {
     const html = await fetch("/components/inventory/inventory.component.html")
