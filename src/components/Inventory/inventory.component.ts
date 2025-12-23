@@ -20,9 +20,10 @@ export class InventoryComponent extends HTMLElement {
     this.startForms(); // Agora os elementos existem
     this.loadInventory();  // Pode buscar dados de API 
     this.toggleMenu(); // Ouvir clique no botão do menu    
+    this.switchTopics();
   }
 
-  switchTopics(): string {
+  switchTopics(): void {
     const screens = [
       { id: "chip-screen", topic: "chip" },
       { id: "cellphone-screen", topic: "cellphone" },
@@ -39,35 +40,35 @@ export class InventoryComponent extends HTMLElement {
 
       element.addEventListener("click", (event) => {
         event.stopPropagation();
+
         this.currentTopic = topic; 
+        this.updateScreen();
       });
     });
+  }
+
+  updateScreen(): void {
+    this.chipScreen = false;
+    this.cellphoneScreen = false;
+    this.notebookScreen = false;
 
     switch (this.currentTopic) {
       case "chip":
         this.chipScreen = true;
-        this.cellphoneScreen = false;
-        this.notebookScreen = false;
         break;
+
       case "cellphone":
-        this.chipScreen = false;
         this.cellphoneScreen = true;
-        this.notebookScreen = false;
         break;
+
       case "notebook":
-        this.chipScreen = false;
-        this.cellphoneScreen = false;
-        this.notebookScreen = true;
-        break;
-      default:
-        this.chipScreen = false;
-        this.cellphoneScreen = false;
         this.notebookScreen = true;
         break;
     }
 
-    return this.currentTopic;
+    console.log("página atual:", this.currentTopic);
   }
+
 
   public toggleMenu(): void {
     const toggle = this.inventoryHTML.querySelector("#menu-toggle") as HTMLElement;
