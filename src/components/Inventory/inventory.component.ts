@@ -5,17 +5,68 @@ export class InventoryComponent extends HTMLElement {
   public inventoryHTML: HTMLElement = this;
   public inventory!: Inventory;
   public chip!: Chip
-  public menuToggleButton: boolean = false; 
+  public menuToggleButton: boolean = false;
+  public chipScreen: boolean = true;
+  public cellphoneScreen: boolean = false;
+  public notebookScreen: boolean = false;
+  public currentTopic!: string;
 
   constructor() {
     super();
   };
 
   async connectedCallback() { // ciclo de vida do componente
-    await this.connectedFiles(); // Inserir HTML e CSS no shadow
+    await this.connectedFiles(); // Carregar HTML e CSS
     this.startForms(); // Agora os elementos existem
     this.loadInventory();  // Pode buscar dados de API 
     this.toggleMenu(); // Ouvir clique no botão do menu    
+  }
+
+  switchTopics(): string {
+    const screens = [
+      { id: "chip-screen", topic: "chip" },
+      { id: "cellphone-screen", topic: "cellphone" },
+      { id: "notebook-screen", topic: "notebook" },
+    ] as const;
+
+    screens.forEach(({ id, topic }) => {
+      const element = this.inventoryHTML.querySelector(`#${id}`) as HTMLElement;
+
+      if (!element) {
+        console.error(`Elemento não encontrado: #${id}`);
+        return;
+      }
+
+      element.addEventListener("click", (event) => {
+        event.stopPropagation();
+        this.currentTopic = topic; 
+      });
+    });
+
+    switch (this.currentTopic) {
+      case "chip":
+        this.chipScreen = true;
+        this.cellphoneScreen = false;
+        this.notebookScreen = false;
+        break;
+      case "cellphone":
+        this.chipScreen = false;
+        this.cellphoneScreen = true;
+        this.notebookScreen = false;
+        break;
+      case "notebook":
+        this.chipScreen = false;
+        this.cellphoneScreen = false;
+        this.notebookScreen = true;
+        break;
+      default:
+        this.chipScreen = false;
+        this.cellphoneScreen = false;
+        this.notebookScreen = true;
+        break;
+    }
+
+    return this.currentTopic;
   }
 
   public toggleMenu(): void {
@@ -41,7 +92,6 @@ export class InventoryComponent extends HTMLElement {
       }
     });
   }
-
 
   async connectedFiles(): Promise<void> {
     const html = await fetch("/components/inventory/inventory.component.html")
@@ -72,25 +122,24 @@ export class InventoryComponent extends HTMLElement {
   }
 
   async startForms(): Promise<void> {
-  const formChip = this.inventoryHTML.querySelector("#create-chip-form") as HTMLFormElement;
+    const formChip = this.inventoryHTML.querySelector("#create-chip-form") as HTMLFormElement;
 
-  if (!formChip) return;
+    if (!formChip) return;
 
-  formChip.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    formChip.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    const chip: Chip = {
-      model: (this.inventoryHTML.querySelector("#chip-model") as HTMLInputElement).value,
-      ICCID: Number((this.inventoryHTML.querySelector("#chip-iccid") as HTMLInputElement).value),
-      hlr: (this.inventoryHTML.querySelector("#chip-hlr") as HTMLInputElement).value,
-      line: (this.inventoryHTML.querySelector("#chip-line") as HTMLInputElement).value,
-    };
+      const chip: Chip = {
+        model: (this.inventoryHTML.querySelector("#chip-model") as HTMLInputElement).value,
+        ICCID: Number((this.inventoryHTML.querySelector("#chip-iccid") as HTMLInputElement).value),
+        hlr: (this.inventoryHTML.querySelector("#chip-hlr") as HTMLInputElement).value,
+        line: (this.inventoryHTML.querySelector("#chip-line") as HTMLInputElement).value,
+      };
 
-    await this.createChip(chip);
-    formChip.reset();
-  });
-}
-
+      await this.createChip(chip);
+      formChip.reset();
+    });
+  }
 
   async createChip(chip: Chip): Promise<Chip> {
     console.log("Creating chip:", chip);
